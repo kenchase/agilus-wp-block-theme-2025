@@ -1,0 +1,357 @@
+{
+  "customTemplates": [
+    {
+      "name": "wp-custom-template-selection-page",
+      "postTypes": ["page"],
+      "title": "Selection Page"
+    },
+    {
+      "name": "wp-custom-template-candidate-landing-page",
+      "title": "Candidate Landing Page"
+    },
+    {
+      "name": "wp-custom-template-client-landing-page",
+      "title": "Client Landing Page"
+    },
+    {
+      "name": "wp-custom-template-client-blog-page",
+      "title": "Client Blog Page"
+    }
+  ],
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "palette": [
+        {
+          "color": "#FFF100",
+          "name": "AG Yellow 500",
+          "slug": "ag-yellow-500"
+        },
+        {
+          "color": "#1E4D84",
+          "name": "AG Blue 500",
+          "slug": "ag-blue-500"
+        },
+        {
+          "color": "#183E6A",
+          "name": "AG Blue 600",
+          "slug": "ag-blue-600"
+        },
+        {
+          "color": "#122E4F",
+          "name": "AG Blue 700",
+          "slug": "ag-blue-700"
+        },
+        {
+          "color": "#ffffff",
+          "name": "Light",
+          "slug": "light"
+        },
+        {
+          "color": "#f8f8f8",
+          "name": "AG Grey 040",
+          "slug": "ag-grey-040"
+        },
+        {
+          "color": "#efefef",
+          "name": "AG Grey 100",
+          "slug": "ag-grey-100"
+        },
+        {
+          "color": "#b6b6b8",
+          "name": "AG Grey 500",
+          "slug": "ag-grey-500"
+        },
+        {
+          "color": "#757679",
+          "name": "AG Grey 600",
+          "slug": "ag-grey-600"
+        },
+        {
+          "color": "#5E5E61",
+          "name": "Neutral 600",
+          "slug": "neutral-600"
+        },
+        {
+          "color": "#464749",
+          "name": "Neutral 700",
+          "slug": "neutral-700"
+        },
+        {
+          "color": "#2F2F30",
+          "name": "Neutral 800",
+          "slug": "neutral-800"
+        },
+        {
+          "color": "#171818",
+          "name": "Neutral 900",
+          "slug": "neutral-900"
+        },
+        {
+          "color": "#000000",
+          "name": "Dark",
+          "slug": "dark"
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "720px",
+      "wideSize": "1200px"
+    },
+    "spacing": {
+      "customSpacingSize": false,
+      "defaultSpacingSizes": false,
+      "spacingSizes": [
+        {
+          "name": "3XS",
+          "size": "clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem)",
+          "slug": "10"
+        },
+        {
+          "name": "2XS",
+          "size": "clamp(0.5rem, 0.4565rem + 0.2174vw, 0.625rem)",
+          "slug": "20"
+        },
+        {
+          "name": "XS",
+          "size": "clamp(0.75rem, 0.6848rem + 0.3261vw, 0.9375rem)",
+          "slug": "30"
+        },
+        {
+          "name": "S",
+          "size": "clamp(1rem, 0.913rem + 0.4348vw, 1.25rem)",
+          "slug": "40"
+        },
+        {
+          "name": "M",
+          "size": "clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem)",
+          "slug": "50"
+        },
+        {
+          "name": "L",
+          "size": "clamp(2rem, 1.8261rem + 0.8696vw, 2.5rem)",
+          "slug": "60"
+        },
+        {
+          "name": "XL",
+          "size": "clamp(3rem, 2.7391rem + 1.3043vw, 3.75rem)",
+          "slug": "70"
+        },
+        {
+          "name": "2XL",
+          "size": "clamp(4rem, 3.6522rem + 1.7391vw, 5rem)",
+          "slug": "80"
+        },
+        {
+          "name": "3XL",
+          "size": "clamp(6rem, 5.4783rem + 2.6087vw, 7.5rem)",
+          "slug": "90"
+        }
+      ],
+      "units": ["%", "px", "em", "rem", "vh", "vw"]
+    },
+    "typography": {
+      "customFontSize": false,
+      "defaultFontSizes": false,
+      "dropCap": false,
+      "fluid": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+          "name": "System Font",
+          "slug": "system-font"
+        },
+        {
+          "fontFace": [
+            {
+              "fontFamily": "\"Sofia Pro Soft\"",
+              "fontStyle": "italic",
+              "fontWeight": "300",
+              "src": ["file:./assets/fonts/sofia-pro-soft/sofia-pro-soft-300-italic.otf"]
+            },
+            {
+              "fontFamily": "\"Sofia Pro Soft\"",
+              "fontStyle": "normal",
+              "fontWeight": "300",
+              "src": ["file:./assets/fonts/sofia-pro-soft/sofia-pro-soft-300-normal.otf"]
+            },
+            {
+              "fontFamily": "\"Sofia Pro Soft\"",
+              "fontStyle": "italic",
+              "fontWeight": "500",
+              "src": ["file:./assets/fonts/sofia-pro-soft/sofia-pro-soft-500-italic.otf"]
+            },
+            {
+              "fontFamily": "\"Sofia Pro Soft\"",
+              "fontStyle": "normal",
+              "fontWeight": "500",
+              "src": ["file:./assets/fonts/sofia-pro-soft/sofia-pro-soft-500-normal.otf"]
+            },
+            {
+              "fontFamily": "\"Sofia Pro Soft\"",
+              "fontStyle": "italic",
+              "fontWeight": "700",
+              "src": ["file:./assets/fonts/sofia-pro-soft/sofia-pro-soft-700-italic.otf"]
+            },
+            {
+              "fontFamily": "\"Sofia Pro Soft\"",
+              "fontStyle": "normal",
+              "fontWeight": "700",
+              "src": ["file:./assets/fonts/sofia-pro-soft/sofia-pro-soft-700-normal.otf"]
+            }
+          ],
+          "fontFamily": "\"Sofia Pro Soft\"",
+          "name": "Sofia Pro Soft",
+          "slug": "sofia-pro-soft"
+        }
+      ],
+      "fontSizes": [
+        {
+          "fluid": false,
+          "name": "Small",
+          "size": "1rem",
+          "slug": "small"
+        },
+        {
+          "fluid": {
+            "max": "1.25rem",
+            "min": "1rem"
+          },
+          "name": "Medium",
+          "size": "1.25rem",
+          "slug": "medium"
+        }
+      ],
+      "fontStyle": true,
+      "fontWeight": true,
+      "letterSpacing": false,
+      "lineHeight": false,
+      "textAlign": true,
+      "textColumns": false,
+      "textDecoration": true,
+      "textTransform": true,
+      "writingMode": false
+    },
+    "useRootPaddingAwareAlignments": true
+  },
+  "styles": {
+    "blocks": {
+      "core/button": {
+        "border": {
+          "radius": "8px"
+        },
+        "spacing": {
+          "padding": {
+            "bottom": "var(--wp--preset--spacing--20)",
+            "left": "var(--wp--preset--spacing--20)",
+            "right": "var(--wp--preset--spacing--20)",
+            "top": "var(--wp--preset--spacing--20)"
+          }
+        }
+      }
+    },
+    "color": {
+      "background": "var(--wp--preset--color--ag-blue-500)",
+      "text": "var(--wp--preset--color--light)"
+    },
+    "elements": {
+      "button": {
+        ":hover": {
+          "color": {
+            "background": "var(--wp--preset--color--accent-1)"
+          }
+        },
+        "color": {
+          "background": "var(--wp--preset--color--ag-blue-500)",
+          "text": "var(--wp--preset--color--light)"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--sofia-pro-soft)",
+          "fontStyle": "normal",
+          "fontWeight": "300"
+        }
+      },
+      "caption": {
+        "color": {
+          "text": "var(--wp--preset--color--dark)"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--sofia-pro-soft)",
+          "fontStyle": "normal",
+          "fontWeight": "300"
+        }
+      },
+      "heading": {
+        "color": {
+          "text": "var(--wp--preset--color--dark)"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--sofia-pro-soft)",
+          "fontStyle": "normal",
+          "fontWeight": "700"
+        }
+      },
+      "link": {
+        ":hover": {
+          "color": {
+            "text": "var(--wp--preset--color--ag-yellow-500)"
+          }
+        },
+        "color": {
+          "text": "var(--wp--preset--color--light)"
+        },
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--sofia-pro-soft)",
+          "fontStyle": "normal",
+          "fontWeight": "300"
+        }
+      }
+    },
+    "spacing": {
+      "blockGap": "var(--wp--preset--spacing--40)",
+      "padding": {
+        "bottom": "0",
+        "left": "0",
+        "right": "0",
+        "top": "0"
+      }
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--sofia-pro-soft)",
+      "fontSize": "var(--wp--preset--font-size--medium)",
+      "fontStyle": "normal",
+      "fontWeight": "300",
+      "lineHeight": "1.5em"
+    }
+  },
+  "templateParts": [
+    {
+      "area": "header",
+      "name": "header",
+      "title": "Header"
+    },
+    {
+      "area": "header",
+      "name": "header-candidates",
+      "title": "Header - Candidates"
+    },
+    {
+      "area": "header",
+      "name": "header-clients",
+      "title": "Header - Clients"
+    },
+    {
+      "area": "footer",
+      "name": "footer",
+      "title": "Footer"
+    }
+  ],
+  "version": 3,
+  "$schema": "https://schemas.wp.org/wp/6.7/theme.json"
+}
