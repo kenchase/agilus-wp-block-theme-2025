@@ -14,11 +14,54 @@ Text Domain: agilus
 Tags: 
 */
 
-:where(.wp-site-blocks) > * {
-  margin-block-start: 0;
+@layer reset {
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p,
+  li {
+    text-wrap: pretty;
+  }
 }
 
-.wp-block-post-featured-image img:hover {
-  opacity: 0.9;
-  transition: all 0.3s;
+@layer layout {
+  :where(.wp-site-blocks) > * {
+    margin-block-start: 0;
+  }
+}
+
+@layer components {
+  /* Main Navigation */
+  @media (width >= 1200px) {
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+      display: none !important;
+    }
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+      display: block !important;
+      width: 100%;
+      position: relative;
+      z-index: auto;
+      background-color: inherit;
+    }
+  }
+
+  @media (width < 1200px) {
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+      display: flex !important;
+    }
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+      display: none !important;
+    }
+  }
+}
+
+@layer transitions {
+  .wp-block-post-featured-image img:hover {
+    opacity: 0.9;
+    transition: all 0.3s;
+  }
 }
