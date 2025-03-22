@@ -1,0 +1,16 @@
+{
+  "name": "acf/team-member",
+  "title": "Team Member",
+  "description": "A custom team member block that uses ACF fields.",
+  "style": ["file:./team-member.css"],
+  "category": "formatting",
+  "icon": "groups",
+  "keywords": ["team", "member", "person"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "testimonial.php"
+  },
+  "supports": {
+    "anchor": true
+  }
+}
