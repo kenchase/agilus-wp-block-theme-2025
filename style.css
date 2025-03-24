@@ -49,6 +49,13 @@ Tags:
     }
   }
 
+  .top-nav-search-btn {
+  }
+
+  .top-nav-search-bar {
+    display: none;
+  }
+
   @media (width < 1200px) {
     .wp-block-navigation__responsive-container-open:not(.always-shown) {
       display: flex !important;

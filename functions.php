@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Enqueues style.css on the front-end.
+ * Enqueues css on the front-end.
  */
 if (! function_exists('agilus_enqueue_styles')) {
     function agilus_enqueue_styles()
@@ -17,21 +17,21 @@ if (! function_exists('agilus_enqueue_styles')) {
 add_action('wp_enqueue_scripts', 'agilus_enqueue_styles');
 
 /**
- * We use WordPress's init hook to make sure
- * our blocks are registered early in the loading
- * process.
- *
- * @link https://developer.wordpress.org/reference/hooks/init/
+ * Enqueues js scripts on the front-end.
  */
-function ag_register_acf_blocks()
-{
-    /**
-     * We register our block's with WordPress's handy
-     * register_block_type();
-     *
-     * @link https://developer.wordpress.org/reference/functions/register_block_type/
-     */
-    register_block_type(__DIR__ . '/blocks/team-member');
+if (! function_exists('agilus_enqueue_scripts')) {
+    function agilus_enqueue_scripts()
+    {
+        wp_enqueue_script(
+            'agilus-scripts',
+            get_template_directory_uri() . '/scripts.js',
+            array(),
+            1.0,
+            true
+        );
+    }
 }
-// Here we call our tt3child_register_acf_block() function on init.
-// add_action('init', 'ag_register_acf_blocks');
+add_action('wp_enqueue_scripts', 'agilus_enqueue_scripts');
+
+require_once(get_template_directory() .  '/inc/ag-custom-blocks.php');
+require_once(get_template_directory() .  '/inc/ag-custom-search.php');
