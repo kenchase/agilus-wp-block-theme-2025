@@ -6,10 +6,11 @@
 if (! function_exists('agilus_enqueue_styles')) {
     function agilus_enqueue_styles()
     {
+        wp_enqueue_style('dashicons');
         wp_enqueue_style(
             'agilus-style',
             get_parent_theme_file_uri('style.css'),
-            array(),
+            array('dashicons'),
             wp_get_theme()->get('Version')
         );
     }
