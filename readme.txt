@@ -12,7 +12,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 The 2025 Agilus WordPress Block Theme
 
-
 == Changelog ==
 
 = 1.0.0 =

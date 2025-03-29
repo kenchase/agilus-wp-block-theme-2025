@@ -45,6 +45,7 @@ $style  = implode('; ', $styles);
  * @param int $numberOfJobs Number of jobs to retrieve (0 for all jobs)
  * @return array|string Jobs data or error message
  */
+
 function ag_get_latest_jobs($url, $numberOfJobs = 0)
 {
     // Step 1: Retrieve the XML from the URL
