@@ -6,28 +6,20 @@
       "title": "Selection Page"
     },
     {
-      "name": "wp-custom-template-candidate-landing-page",
-      "title": "Candidate Landing Page"
+      "name": "wp-custom-template-client-page",
+      "title": "Client Page"
     },
     {
       "name": "wp-custom-template-client-landing-page",
       "title": "Client Landing Page"
     },
     {
-      "name": "wp-custom-template-candidate-blog-page",
-      "title": "Candidate Blog Page"
+      "name": "wp-custom-template-job-seeker-page",
+      "title": "Job Seeker Page"
     },
     {
-      "name": "wp-custom-template-client-blog-page",
-      "title": "Client Blog Page"
-    },
-    {
-      "name": "wp-custom-template-candidate-page",
-      "title": "Candidate Page"
-    },
-    {
-      "name": "wp-custom-template-client-page",
-      "title": "Client Page"
+      "name": "wp-custom-template-job-seeker-landing-page",
+      "title": "Job Seeker Landing Page"
     },
     {
       "name": "wp-custom-template-candidate-search-results-page",
@@ -54,6 +46,11 @@
           "slug": "white-opacity-70"
         },
         {
+          "gradient": "linear-gradient(90deg, rgba(33,77,132,0.95) 0%, rgba(33,77,132,0.95) 100%)",
+          "name": "Blue Opacity",
+          "slug": "blue-opacity-95"
+        },
+        {
           "gradient": "linear-gradient(90deg, rgba(000,000,000,0.2) 0%, rgba(000,000,000,0.2) 100%)",
           "name": "Black Opacity",
           "slug": "black-opacity-20"
@@ -66,7 +63,7 @@
           "slug": "ag-yellow-500"
         },
         {
-          "color": "#1E4D84",
+          "color": "#214d84",
           "name": "AG Blue 500",
           "slug": "ag-blue-500"
         },
@@ -521,8 +518,8 @@
     },
     {
       "area": "header",
-      "name": "header-candidates",
-      "title": "Header - Candidates"
+      "name": "header-job-seekers",
+      "title": "Header - Job Seekers"
     },
     {
       "area": "header",
@@ -533,10 +530,6 @@
       "area": "footer",
       "name": "footer",
       "title": "Footer"
-    },
-    {
-      "name": "latest-blog-posts",
-      "title": "Latest Blog Posts"
     }
   ],
   "version": 3,

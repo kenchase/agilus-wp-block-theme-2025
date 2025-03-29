@@ -53,3 +53,10 @@ function ag_register_faq_block()
     register_block_type(__DIR__ . '/../blocks/ag-faqs');
 }
 add_action('init', 'ag_register_faq_block');
+
+// Locations Block
+function ag_register_locations_block()
+{
+    register_block_type(__DIR__ . '/../blocks/ag-locations');
+}
+add_action('init', 'ag_register_locations_block');

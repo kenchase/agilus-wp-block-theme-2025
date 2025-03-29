@@ -28,6 +28,20 @@ Tags:
   }
 }
 
+@layer utilities {
+  .visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+}
+
 @layer layout {
   :where(.wp-site-blocks) > * {
     /* margin-block-start: 0 !important; */
@@ -35,6 +49,24 @@ Tags:
 }
 
 @layer components {
+  /* Selection Page */
+
+  .page-template-wp-custom-template-selection-page {
+    main {
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    .ag-full-browser-height {
+      height: 100vh;
+      background-position: center;
+    }
+  }
+
+  .page-template-wp-custom-template-selection-page > .wp-block-group {
+    height: 100vh;
+  }
+
   /* Main Navigation */
   @media (width >= 1200px) {
     .wp-block-navigation__responsive-container-open:not(.always-shown) {
