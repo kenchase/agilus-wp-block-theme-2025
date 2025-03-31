@@ -5,12 +5,16 @@
  */
 
 
-function agilus_block_editor_config()
+function agilus_theme_setup()
 {
-    remove_theme_support('core-block-patterns'); // Remove all WordPress default block patterns. We only want to make theme-specific patterns available
-    remove_action('enqueue_block_editor_assets', 'wp_enqueue_editor_block_directory_assets'); // Remove the block directory assets from the block editor. Otherwise, an "Available to install" section will show up in the block inserter    
+    // Remove all WordPress default block patterns. We only want to make theme-specific patterns available
+    remove_theme_support('core-block-patterns');
+    // Remove the block directory assets from the block editor. Otherwise, an "Available to install" section will show up in the block inserter
+    remove_action('enqueue_block_editor_assets', 'wp_enqueue_editor_block_directory_assets');
+    // Disable remote patterns from the WordPress.org Pattern Directory
+    add_filter('should_load_remote_block_patterns', '__return_false');
 }
-add_action('init', 'agilus_block_editor_config');
+add_action('after_setup_theme', 'agilus_theme_setup');
 
 /**
  * Enqueues css on the front-end.
@@ -47,6 +51,5 @@ if (! function_exists('agilus_enqueue_scripts')) {
 add_action('wp_enqueue_scripts', 'agilus_enqueue_scripts');
 
 require_once(get_template_directory() .  '/inc/ag-custom-blocks.php');
-// require_once(get_template_directory() .  '/inc/ag-patterns.php');
 require_once(get_template_directory() .  '/inc/ag-custom-search.php');
 require_once(get_template_directory() .  '/inc/ag-custom-nav.php');
