@@ -1,10 +1,8 @@
 <?php
 
 /**
- * Disable certain things from the block editor selector
+ * Block editor customizations.
  */
-
-
 function agilus_theme_setup()
 {
     // Remove all WordPress default block patterns. We only want to make theme-specific patterns available
@@ -15,6 +13,15 @@ function agilus_theme_setup()
     add_filter('should_load_remote_block_patterns', '__return_false');
 }
 add_action('after_setup_theme', 'agilus_theme_setup');
+
+/** 
+ * Add category support to pages
+ */
+function agilus_add_categories_to_pages()
+{
+    register_taxonomy_for_object_type('category', 'page');
+}
+add_action('init', 'agilus_add_categories_to_pages');
 
 /**
  * Enqueues css on the front-end.
@@ -53,3 +60,4 @@ add_action('wp_enqueue_scripts', 'agilus_enqueue_scripts');
 require_once(get_template_directory() .  '/inc/ag-custom-blocks.php');
 require_once(get_template_directory() .  '/inc/ag-custom-search.php');
 require_once(get_template_directory() .  '/inc/ag-custom-nav.php');
+// require_once(get_template_directory() .  '/inc/ag-permalinks.php');
