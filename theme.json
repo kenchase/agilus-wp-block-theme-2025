@@ -323,6 +323,15 @@
         },
         {
           "fluid": {
+            "max": "2.7994rem",
+            "min": "2.0273rem"
+          },
+          "name": "Title 2X large",
+          "size": "2.7994rem",
+          "slug": "title-2x-large"
+        },
+        {
+          "fluid": {
             "max": "2.5658rem",
             "min": "2.1815rem"
           },
@@ -443,6 +452,21 @@
         }
       },
       "h1": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--title-2x-large)"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--title-x-large)"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--title-large)"
+        }
+      },
+      "h4": {
         "typography": {
           "fontSize": "var(--wp--preset--font-size--title-large)"
         }

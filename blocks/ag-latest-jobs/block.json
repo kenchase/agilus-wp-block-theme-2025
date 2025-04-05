@@ -2,6 +2,7 @@
   "name": "acf/lastest-jobs",
   "title": "AG Latest Jobs",
   "description": "Automatically display the latest jobs from an XML feed.",
+  "style": ["file:./ag-latest-jobs.css"],
   "category": "agilus-blocks",
   "icon": "admin-tools",
   "keywords": ["work", "jobs", "employment", "career"],
@@ -10,6 +11,6 @@
     "renderTemplate": "ag-latest-jobs.php"
   },
   "supports": {
-    "anchor": true
+    "anchor": false
   }
 }

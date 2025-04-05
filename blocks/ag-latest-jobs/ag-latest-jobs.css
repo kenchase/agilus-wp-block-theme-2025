@@ -1,0 +1,17 @@
+.ag-latest-jobs {
+}
+
+.ag-latest-jobs__col {
+  padding: var(--wp--preset--spacing--60);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.ag-latest-jobs__title {
+  font-size: var(--wp--preset--font-size--x-large);
+}
+.ag-latest-jobs__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

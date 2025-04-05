@@ -11,17 +11,12 @@ $num_items_to_show = get_field('ag-latest-jobs-num-items');
 $xml_feed_url = get_field('ag-latest-jobs-feed-url');
 
 // Load the feed.
-
 $feed = ag_get_latest_jobs($xml_feed_url, $num_items_to_show);
-
-// Support custom "anchor" values.
-$anchor = '';
-if (! empty($block['anchor'])) {
-    $anchor = 'id="' . esc_attr($block['anchor']) . '" ';
-}
 
 // Create class attribute allowing for custom "className" and "align" values.
 $class_name = 'ag-latest-jobs';
+$background_color = '';
+$text_color = '';
 if (! empty($block['className'])) {
     $class_name .= ' ' . $block['className'];
 }
@@ -34,7 +29,7 @@ if ($background_color || $text_color) {
 
 // Build a valid style attribute for background and text colors.
 $styles = array('background-color: ' . $background_color, 'color: ' . $text_color);
-$style  = implode('; ', $styles);
+$style = implode('; ', $styles);
 
 // PHP Functions
 
@@ -45,6 +40,7 @@ $style  = implode('; ', $styles);
  * @param int $numberOfJobs Number of jobs to retrieve (0 for all jobs)
  * @return array|string Jobs data or error message
  */
+
 
 function ag_get_latest_jobs($url, $numberOfJobs = 0)
 {
@@ -141,8 +137,6 @@ function ag_get_latest_jobs($url, $numberOfJobs = 0)
         return "No jobs were extracted from the XML.";
     }
 }
-
-
 ?>
 
 <div <?php echo esc_attr($anchor); ?>class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-layout-1 <?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
@@ -154,13 +148,18 @@ function ag_get_latest_jobs($url, $numberOfJobs = 0)
             $type = $job['EmploymentType'];
             $date = $job['posteddate'];
             $link = 'https://en.agilus.ca/jobs/jobdetails?jobId=' . $job['JobNumber'];
+
+            $date_obj = strtotime($date);
+            $date_str = date('F j, Y', $date_obj);
     ?>
 
             <div class="wp-block-column ag-latest-jobs__col" style="flex-basis:33.33%">
-                <h3><?php echo ($title); ?></h3>
-                <p><?php echo ($location); ?></p>
-                <p><?php echo ($type); ?></p>
-                <p><?php echo ($date); ?></p>
+                <h3 class="ag-latest-jobs__title"><?php echo (esc_html($title)); ?></h3>
+                <ul class="ag-latest-jobs__list">
+                    <li class="ag-latest-jobs__list-item"><?php echo (esc_html($location)); ?></li>
+                    <li class="ag-latest-jobs__list-item"><?php echo (esc_html($type)); ?></li>
+                    <li class="ag-latest-jobs__list-item"><?php echo (esc_html($date_str)); ?></li>
+                </ul>
                 <p><a href="<?php echo ($link); ?>">View job posting</a></p>
             </div>
         <?php } ?>
