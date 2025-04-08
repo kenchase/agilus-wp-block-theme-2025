@@ -125,6 +125,10 @@ Tags:
     }
   }
 
+  .wp-block-search__inside-wrapper {
+    /* border: none !important; */
+  }
+
   footer.wp-block-template-part {
     margin-block-start: 0 !important;
   }
