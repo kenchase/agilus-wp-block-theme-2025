@@ -2,6 +2,7 @@
   "name": "acf/ag-faqs",
   "title": "AG FAQs",
   "description": "A block that displays toggleable FAQs.",
+  "style": ["file:./ag-faqs.css"],
   "category": "agilus-blocks",
   "icon": "admin-users",
   "keywords": ["faq", "toggle", "question", "answer"],

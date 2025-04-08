@@ -54,9 +54,9 @@ function ag_register_faq_block()
 }
 add_action('init', 'ag_register_faq_block');
 
-// Locations Block
-function ag_register_locations_block()
+// Branches Block
+function ag_register_branches_block()
 {
-    register_block_type(__DIR__ . '/../blocks/ag-locations');
+    register_block_type(__DIR__ . '/../blocks/ag-branches');
 }
-add_action('init', 'ag_register_locations_block');
+add_action('init', 'ag_register_branches_block');

@@ -81,7 +81,6 @@ Tags:
 
 @layer components {
   /* Selection Page */
-
   .page-template-wp-custom-template-selection-page {
     main {
       padding-bottom: 0 !important;
@@ -124,6 +123,23 @@ Tags:
       max-height: 100px; /* Adjust based on expected content height */
       overflow: visible;
     }
+  }
+
+  footer.wp-block-template-part {
+    margin-block-start: 0 !important;
+  }
+
+  /* Gravity Forms */
+  body .gform_wrapper .gform_footer input[type='submit'] {
+    background-color: var(--wp--preset--color--ag-blue-500);
+    font-size: var(--wp--preset--font-size--x-large) !important;
+    color: var(--wp--preset--color--light);
+    font-weight: 300 !important;
+    padding: 1rem 2rem !important;
+    border-radius: 8px !important;
+  }
+  body .gform_wrapper .gform_footer input:hover[type='submit'] {
+    background-color: var(--wp--preset--color--ag-blue-600) !important;
   }
 
   @media (width < 1200px) {
