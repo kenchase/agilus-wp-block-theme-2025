@@ -1,0 +1,17 @@
+{
+  "name": "acf/ag-case-study",
+  "title": "AG Case Study",
+  "description": "Automatically display a case study logo which opens an overlay when clicked",
+  "style": ["file:./ag-case-study.css"],
+  "script": "file:./ag-case-study.js",
+  "category": "agilus-blocks",
+  "icon": "admin-tools",
+  "keywords": ["case study"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "ag-case-study.php"
+  },
+  "supports": {
+    "anchor": false
+  }
+}

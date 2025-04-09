@@ -1,35 +1,40 @@
 {
-    "key": "group_67e2bdf5c2522",
-    "title": "Block: Search Toggle",
+    "key": "group_67f66f0a8d7da",
+    "title": "Case Studies",
     "fields": [
         {
-            "key": "field_67e2bdf5b54f7",
-            "label": "Class Name To Toggle",
-            "name": "ag_st_class_name_to_toggle",
+            "key": "field_67f66f0a9fbe3",
+            "label": "Logo",
+            "name": "ag-cs-logo",
             "aria-label": "",
-            "type": "text",
+            "type": "image",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "maxlength": "",
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
             "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "preview_size": "medium"
         }
     ],
     "location": [
         [
             {
-                "param": "block",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf\/latest-jobs"
+                "value": "ag-case-study"
             }
         ]
     ],
@@ -42,5 +47,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1744146947
+    "modified": 1744203715
 }

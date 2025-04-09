@@ -60,3 +60,10 @@ function ag_register_branches_block()
     register_block_type(__DIR__ . '/../blocks/ag-branches');
 }
 add_action('init', 'ag_register_branches_block');
+
+// Case Study Block
+function ag_register_case_study_block()
+{
+    register_block_type(__DIR__ . '/../blocks/ag-case-study');
+}
+add_action('init', 'ag_register_case_study_block');
