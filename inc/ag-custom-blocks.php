@@ -67,3 +67,10 @@ function ag_register_case_study_block()
     register_block_type(__DIR__ . '/../blocks/ag-case-study');
 }
 add_action('init', 'ag_register_case_study_block');
+
+// Content Index Block
+function ag_register_content_index_block()
+{
+    register_block_type(__DIR__ . '/../blocks/ag-content-index');
+}
+add_action('init', 'ag_register_content_index_block');

@@ -1,0 +1,22 @@
+.ag-content-index--active .ag-content-index__content > .wp-block-group {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
+}
+
+/* Menu */
+
+.ag-content-index__menu .wp-block-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ag-content-index__menu a {
+  text-decoration: none;
+}
+
+/* Content */
+
+.ag-content-index__content > .wp-block-group {
+  transition: opacity 0.3s ease-in-out;
+}

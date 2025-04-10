@@ -51,7 +51,7 @@ function createModalElements() {
 }
 
 function makeModal() {
-  const links = document.querySelectorAll('.ag-case-study__logo a');
+  const links = document.querySelectorAll('.ag-case-study .ag-case-study__card a');
   links.forEach((link) => {
     link.addEventListener('click', function (event) {
       event.preventDefault(); // Prevent the default action of the link

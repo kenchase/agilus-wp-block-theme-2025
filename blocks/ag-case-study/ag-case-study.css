@@ -1,10 +1,28 @@
+.ag-case-study__card {
+  text-align: center;
+}
+.ag-case-study__short-title {
+  font-size: var(--wp--preset--font-size--x-large);
+  font-weight: bold;
+}
+
+.ag-case-study__card a {
+  text-decoration: none;
+}
+
 .ag-case-study__logo img {
   display: block;
   margin: 0 auto;
-  max-width: 240px;
+  max-width: 200px;
   height: auto;
   padding: 0;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
+
+/* Modal */
 
 .modal-overlay {
   position: fixed;

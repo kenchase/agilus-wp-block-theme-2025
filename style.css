@@ -59,19 +59,25 @@ Text Domain: agilus
   .visually-hidden {
     border: 0;
     clip: rect(0 0 0 0);
-    height: auto;
+    height: 1px;
     margin: 0;
     overflow: hidden;
     padding: 0;
     position: absolute;
     width: 1px;
     white-space: nowrap;
+    opacity: 0;
   }
 }
 
 @layer layout {
+  .wp-site-blocks {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
   :where(.wp-site-blocks) > * {
-    /* margin-block-start: 0 !important; */
+    margin-block-start: 0 !important;
   }
 }
 
