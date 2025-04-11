@@ -8,8 +8,18 @@
 			"title": "Selection Page"
 		},
 		{
-			"name": "wp-custom-template-page-wide",
-			"title": "Page: Wide"
+			"name": "single-ag-case-study",
+			"postTypes": [
+				"ag-case-study"
+			],
+			"title": "Single Case Study"
+		},
+		{
+			"name": "single-ag-news-items",
+			"postTypes": [
+				"ag-news-items"
+			],
+			"title": "Single News Item"
 		}
 	],
 	"settings": {
@@ -60,7 +70,7 @@
 					"slug": "ag-blue-700"
 				},
 				{
-					"color": "#ffffff",
+					"color": "#fdfdfd",
 					"name": "Light",
 					"slug": "light"
 				},
@@ -270,7 +280,7 @@
 						"max": "0.8889rem",
 						"min": "0.7901rem"
 					},
-					"name": "Small",
+					"name": "Text Small",
 					"size": "0.8889rem",
 					"slug": "small"
 				},
@@ -279,7 +289,7 @@
 						"max": "1rem",
 						"min": "0.8889rem"
 					},
-					"name": "Medium",
+					"name": "Text Medium",
 					"size": "1rem",
 					"slug": "medium"
 				},
@@ -288,18 +298,27 @@
 						"max": "1.125rem",
 						"min": "1rem"
 					},
-					"name": "Large",
+					"name": "Text Large",
 					"size": "1.125rem",
 					"slug": "large"
 				},
 				{
 					"fluid": {
-						"max": "1.2656rem",
+						"max": "1.25rem",
 						"min": "1.125rem"
 					},
-					"name": "Extra Large",
-					"size": "1.2656rem",
+					"name": "Text 1X Large",
+					"size": "1.25rem",
 					"slug": "x-large"
+				},
+				{
+					"fluid": {
+						"max": "1.4063rem",
+						"min": "1.35rem"
+					},
+					"name": "Text 2X Large",
+					"size": "1.4063rem",
+					"slug": "xx-large"
 				},
 				{
 					"fluid": {
@@ -519,7 +538,7 @@
 				},
 				"typography": {
 					"fontStyle": "normal",
-					"fontWeight": "inherit"
+					"fontWeight": "100"
 				}
 			}
 		},

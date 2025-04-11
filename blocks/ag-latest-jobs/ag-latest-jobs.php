@@ -53,14 +53,14 @@ $style = implode('; ', $styles);
             $date_str = date('F j, Y', $date_obj);
     ?>
 
-            <div class="wp-block-column ag-latest-jobs__col" style="flex-basis:33.33%">
+            <div class="wp-block-column ag-latest-jobs__col ag-clickable-card" style="flex-basis:33.33%">
                 <h3 class="ag-latest-jobs__title"><?php echo (esc_html($title)); ?></h3>
                 <ul class="ag-latest-jobs__list">
                     <li class="ag-latest-jobs__list-item"><?php echo (esc_html($location)); ?></li>
                     <li class="ag-latest-jobs__list-item"><?php echo (esc_html($type)); ?></li>
                     <li class="ag-latest-jobs__list-item"><?php echo (esc_html($date_str)); ?></li>
                 </ul>
-                <p><a href="<?php echo ($link); ?>">View job posting</a></p>
+                <a href="<?php echo ($link); ?>" class="ag-latest-jobs__link" aria-label="<?php echo (esc_html($title)); ?>">View job posting <i class=" fa-solid fa-caret-right"></i></a>
             </div>
         <?php } ?>
     <?php } ?>

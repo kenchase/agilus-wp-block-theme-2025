@@ -1,6 +1,7 @@
-agMakeSearchToggle();
-agSetSelectionPage();
-agGetSelectionPage();
+document.addEventListener('DOMContentLoaded', (event) => {
+  agMakeSearchToggle();
+  agHandleSelectionPage();
+});
 
 function agMakeSearchToggle() {
   const search_toggle_btn = document.querySelector('.search-toggle');
@@ -16,23 +17,27 @@ function agMakeSearchToggle() {
   });
 }
 
-function agSetSelectionPage() {
-  const homeLinks = document.querySelectorAll('.home .ag-section-link a');
-  homeLinks.forEach((link) => {
-    link.addEventListener('click', (e) => {
-      const selectedSection = e.target.getAttribute('href');
-      localStorage.setItem('agSelectedSection', selectedSection);
-    });
-  });
-}
-
-function agGetSelectionPage() {
-  // Check if the user is on the home page and redirect to the selected section (stored in localStorage)
-  if (!document.querySelector('.home')) {
+function agHandleSelectionPage() {
+  // Bail if the current page is not using the selection page template
+  if (!document.querySelector('.page-template-wp-custom-template-selection-page')) {
     return;
   }
+
   const selectedSection = localStorage.getItem('agSelectedSection');
-  if (selectedSection) {
+
+  // Check if the selected section is already stored in localStorage abd redirect to it
+  if (selectedSection !== null) {
     window.location.replace(selectedSection);
+  }
+
+  // If local storage is not set, set the default section to the first one that clicked
+  if (selectedSection === null) {
+    const homeLinks = document.querySelectorAll('.home .ag-section-link a');
+    homeLinks.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        const selectedSection = e.target.getAttribute('href');
+        localStorage.setItem('agSelectedSection', selectedSection);
+      });
+    });
   }
 }
