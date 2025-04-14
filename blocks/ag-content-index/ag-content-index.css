@@ -13,6 +13,14 @@
 
 .ag-content-index__menu a {
   text-decoration: none;
+
+  &.is-current {
+    color: var(--wp--preset--color--ag-blue-500);
+  }
+}
+
+.ag-content-index__menu a i {
+  margin-right: 0.5rem;
 }
 
 /* Content */
