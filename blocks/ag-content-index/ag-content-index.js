@@ -21,12 +21,6 @@ function setupNav(blocks) {
     contentLinks[0].classList.add('is-current');
     // Loop through each link
     contentLinks.forEach((link) => {
-      // Create a new element
-      const el = document.createElement('i');
-      // Set the class name for the element
-      el.className = 'fa-solid fa-caret-right';
-      // Insert the span at the beginning of the anchor
-      link.insertBefore(el, link.firstChild);
       // Add an event listener to the link
       link.addEventListener('click', (event) => {
         event.preventDefault();

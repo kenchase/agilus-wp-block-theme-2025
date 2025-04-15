@@ -6,9 +6,18 @@
 /* Menu */
 
 .ag-content-index__menu .wp-block-list {
+  padding: 0 0 0 1rem;
   margin: 0;
-  padding: 0;
-  list-style: none;
+  list-style-position: outside;
+}
+
+.ag-content-index__menu .wp-block-list li {
+  padding-left: 1rem;
+}
+
+.ag-content-index__menu .wp-block-list li::marker {
+  font-family: 'FontAwesome';
+  content: '\f0da';
 }
 
 .ag-content-index__menu a {

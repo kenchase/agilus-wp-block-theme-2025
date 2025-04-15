@@ -1,0 +1,9 @@
+.ag-team-member-linkedin {
+  margin: 0 !important;
+}
+
+.ag-team-member-linkedin a svg {
+  width: 2.5em;
+  height: 2.5em;
+  fill: var(--wp--preset--color--ag-blue-500);
+}

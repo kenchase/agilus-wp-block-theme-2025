@@ -2,6 +2,7 @@
   "name": "acf/ag-team-member-role",
   "title": "AG Team Member Role",
   "description": "A block that displays the role of a team member.",
+  "style": ["file:./ag-team-member-role.css"],
   "category": "agilus-blocks",
   "icon": "admin-users",
   "keywords": ["team", "member", "role", "position"],
@@ -10,46 +11,6 @@
     "renderTemplate": "ag-team-member-role.php"
   },
   "supports": {
-    "align": true,
-    "alignText": true,
-    "anchor": true,
-    "customClassName": true,
-    "color": {
-      "background": true,
-      "text": true,
-      "gradient": true
-    },
-    "spacing": {
-      "margin": true,
-      "padding": true
-    },
-    "typography": {
-      "fontSize": true,
-      "lineHeight": true
-    },
     "jsx": true
-  },
-  "example": {
-    "attributes": {
-      "mode": "preview",
-      "data": {
-        "team_member_role": "Example Role"
-      }
-    }
-  },
-  "styles": [
-    {
-      "name": "default",
-      "label": "Default",
-      "isDefault": true
-    },
-    {
-      "name": "lead",
-      "label": "Lead"
-    },
-    {
-      "name": "drop-cap",
-      "label": "Drop Cap"
-    }
-  ]
+  }
 }
