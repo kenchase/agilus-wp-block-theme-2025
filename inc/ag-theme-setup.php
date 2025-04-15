@@ -56,3 +56,36 @@ if (! function_exists('agilus_enqueue_scripts')) {
     }
 }
 add_action('wp_enqueue_scripts', 'agilus_enqueue_scripts');
+
+/**
+ * Redirect the Site Logo block link to the current section (clients or job seekers).
+ * Use this hook: render_block_core/site-logo
+ */
+
+function ag_change_site_logo_block_link($block_content, $block)
+{
+    // Set up some custom URLs based on the block's className
+    $custom_url = '';
+
+    // Check if className exists before using str_contains
+    $className = isset($block['attrs']['className']) ? $block['attrs']['className'] : '';
+
+    if (str_contains($className, 'is-job-seekers')) {
+        $custom_url = home_url() . '/job-seekers/'; // Replace with your desired URL
+    } elseif (str_contains($className, 'is-clients')) {
+        $custom_url = home_url() . '/clients/'; // Replace with your desired URL
+    } else {
+        return $block_content; // Return the original content if no class is found
+    }
+
+    // Replace the home URL with a custom URL
+    $block_content = preg_replace(
+        '/(<a\s+[^>]*href=[\'"])' . preg_quote(rtrim(home_url(), '/'), '/') . '\/?([\'"][^>]*>)/i',
+        '$1' . esc_url($custom_url) . '$2',
+        $block_content
+    );
+
+    return $block_content;
+}
+
+add_filter('render_block_core/site-logo', 'ag_change_site_logo_block_link', 10, 2);
