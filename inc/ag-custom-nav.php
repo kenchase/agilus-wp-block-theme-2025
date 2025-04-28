@@ -9,9 +9,6 @@
 
 function ag_custom_navigation_link($block_content, $block)
 {
-
-
-    // print_r($block);
     // Check if the block has a 'className' attribute
     if (isset($block['attrs']['className'])) {
         $block_class = $block['attrs']['className'];

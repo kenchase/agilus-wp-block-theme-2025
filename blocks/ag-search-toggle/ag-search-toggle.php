@@ -10,6 +10,9 @@
 $ag_st_class_name_to_toggle = get_field('ag_st_class_name_to_toggle');
 ?>
 
-<button aria-label="Open Search" class="search-toggle" data-controls="<?php echo ($ag_st_class_name_to_toggle); ?>">
-    <span class="dashicons dashicons-search"></span>
-</button>
+<div class="ag-search-toggle">
+    <button aria-label="Open Search" class="ag-search-toggle-btn" data-controls="<?php echo ($ag_st_class_name_to_toggle); ?>">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <span class="wp-block-navigation-item__label visually-hidden"><?php __('Search', 'agilus') ?></span>
+    </button>
+</div>

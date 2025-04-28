@@ -48,11 +48,9 @@ $style = implode('; ', $styles);
             $type = $job['EmploymentType'];
             $date = $job['posteddate'];
             $link = 'https://en.agilus.ca/jobs/jobdetails?jobId=' . $job['JobNumber'];
-
             $date_obj = strtotime($date);
             $date_str = date('F j, Y', $date_obj);
     ?>
-
             <div class="wp-block-column ag-latest-jobs__col ag-clickable-card" style="flex-basis:33.33%">
                 <h3 class="ag-latest-jobs__title"><?php echo (esc_html($title)); ?></h3>
                 <ul class="ag-latest-jobs__list">

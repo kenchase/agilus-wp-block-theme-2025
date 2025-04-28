@@ -14,20 +14,12 @@ Text Domain: agilus
 */
 
 @layer reset {
-  h1,
-  h2,
-  h3,
-  h4 {
-    text-wrap: balance;
+  html {
+    height: 100%;
   }
-
-  p,
-  li {
-    text-wrap: pretty;
+  body {
+    min-height: 100%;
   }
-}
-
-@layer reset {
   h1,
   h2,
   h3,
@@ -69,23 +61,63 @@ Text Domain: agilus
 
 @layer components {
   /* Selection Page */
-  .page-template-wp-custom-template-selection-page {
-    main {
-      padding-bottom: 0 !important;
-      padding-top: 0 !important;
-    }
 
-    .ag-full-browser-height {
-      height: 100vh;
-      background-position: center;
-    }
+  .page-template-wp-custom-template-selection-page {
+    /* background-color: rgba(33, 77, 132, 08) !important;
+    background-color: #1a3e6a !important; */
+
+    /* background-image: linear-gradient(320deg, #fff 0%, #214d84 100%); */
+    /* background-image: url(./assets/images/cross-stripes.png); */
+    /* background-image: url(./assets/images/noise-pattern-with-subtle-cross-lines.png); */
   }
 
-  .page-template-wp-custom-template-selection-page > .wp-block-group {
-    height: 100vh;
+  .page-template-wp-custom-template-selection-page .ag-selection-box-wrap > div {
+    /* border: 1px solid yellow; */
+    /* width: 1200px;
+    max-width: 1200px !important; */
   }
 
   /* Main Navigation */
+
+  /* Compensate for the height of the header. When you navigate to an anchor, the browser positions the targeted element at the top of the viewport, which means it gets hidden behind your sticky header. */
+  html {
+    scroll-padding-top: 180px; /* Should match your header height */
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Optional: ensures the element appears above other content */
+  }
+
+  .ag-main-nav > .wp-block-navigation-item > a {
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      border-bottom: 4px solid var(--wp--preset--color--neutral-900);
+    }
+  }
+
+  .ag-main-nav .wp-block-navigation__submenu-container a {
+    font-size: var(--wp--preset--font-size--large);
+    line-height: 1.2em;
+    &:hover {
+      color: var(--wp--preset--color--ag-blue-500) !important;
+    }
+  }
+
+  /* Main Navigation Button - make sure buttons have the same "spacing" elements as the links so that they align vertically */
+  .ag-main-nav > .wp-block-navigation-item > button {
+    line-height: 1.2em !important;
+    border-bottom: 4px solid transparent !important;
+  }
+
+  /* Main Navigation Button Icon - make up for the space created by the buttons invisible bottom border so that the icon aligns vertically with the button text */
+  .ag-main-nav > .wp-block-navigation-item > .wp-block-navigation__submenu-icon {
+    margin-top: -4px !important;
+  }
+
+  /* Main Navigation - Override the breakpoint at which the mobile/desktop nav appears */
   @media (width >= 1200px) {
     .wp-block-navigation__responsive-container-open:not(.always-shown) {
       display: none !important;
@@ -98,6 +130,29 @@ Text Domain: agilus
       background-color: inherit;
     }
   }
+
+  @media (width < 1200px) {
+    .wp-block-navigation__responsive-container-open:not(.always-shown) {
+      display: flex !important;
+    }
+    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
+      display: none !important;
+    }
+    /* Adjust the font size and spacing on mobile nav */
+    .ag-main-nav > .wp-block-navigation-item {
+      font-size: var(--wp--preset--font-size--title-large) !important;
+    }
+
+    .ag-main-nav .wp-block-navigation__submenu-container {
+      padding-top: 0 !important;
+    }
+    .ag-main-nav .wp-block-navigation__submenu-container .wp-block-navigation-item a {
+      font-size: var(--wp--preset--font-size--large) !important;
+      padding: 0.5rem !important;
+    }
+  }
+
+  /* Top Search Bar */
 
   .top-nav-search-bar {
     opacity: 0;
@@ -113,15 +168,22 @@ Text Domain: agilus
     }
   }
 
-  .wp-block-search__inside-wrapper {
-    /* border: none !important; */
-  }
+  /* Footer */
 
   footer.wp-block-template-part {
     margin-block-start: 0 !important;
   }
 
+  footer.wp-block-template-part .wp-block-navigation-link {
+    border-bottom: 4px solid transparent;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      border-bottom: 4px solid var(--wp--preset--color--neutral-900);
+    }
+  }
+
   /* Gravity Forms */
+
   body .gform_wrapper .gform_footer input[type='submit'] {
     background-color: var(--wp--preset--color--ag-blue-500);
     font-size: var(--wp--preset--font-size--x-large) !important;
@@ -133,16 +195,9 @@ Text Domain: agilus
   body .gform_wrapper .gform_footer input:hover[type='submit'] {
     background-color: var(--wp--preset--color--ag-blue-600) !important;
   }
-
-  @media (width < 1200px) {
-    .wp-block-navigation__responsive-container-open:not(.always-shown) {
-      display: flex !important;
-    }
-    .wp-block-navigation__responsive-container:not(.hidden-by-default):not(.is-menu-open) {
-      display: none !important;
-    }
-  }
 }
+
+/* Custom CSS for Featured Image Block */
 
 @layer transitions {
   .wp-block-post-featured-image img:hover {
