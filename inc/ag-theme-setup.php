@@ -40,6 +40,12 @@ if (! function_exists('agilus_enqueue_styles')) {
 }
 add_action('wp_enqueue_scripts', 'agilus_enqueue_styles');
 
+/** Add CSS to the Gutenberg editor */
+
+// Gutenberg custom stylesheet
+add_theme_support('editor-styles');
+add_editor_style('style.css'); // make sure path reflects where the file is located
+
 /**
  * Enqueues js scripts on the front-end.
  */

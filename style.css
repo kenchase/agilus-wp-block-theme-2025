@@ -59,26 +59,20 @@ Text Domain: agilus
   }
 }
 
+@layer themejson {
+  /* Stuff that should be in theme.json but isn't because of current limitations (using the css property withing the JSON file isn't elegant at all!) */
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--wp--preset--color--dark);
+    opacity: 0.5;
+  }
+  /* Outline button variation */
+  .wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background-color: var(--wp--preset--color--ag-grey-100) !important;
+  }
+}
+
 @layer components {
-  /* Selection Page */
-
-  .page-template-wp-custom-template-selection-page {
-    /* background-color: rgba(33, 77, 132, 08) !important;
-    background-color: #1a3e6a !important; */
-
-    /* background-image: linear-gradient(320deg, #fff 0%, #214d84 100%); */
-    /* background-image: url(./assets/images/cross-stripes.png); */
-    /* background-image: url(./assets/images/noise-pattern-with-subtle-cross-lines.png); */
-  }
-
-  .page-template-wp-custom-template-selection-page .ag-selection-box-wrap > div {
-    /* border: 1px solid yellow; */
-    /* width: 1200px;
-    max-width: 1200px !important; */
-  }
-
-  /* Main Navigation */
-
   /* Compensate for the height of the header. When you navigate to an anchor, the browser positions the targeted element at the top of the viewport, which means it gets hidden behind your sticky header. */
   html {
     scroll-padding-top: 180px; /* Should match your header height */
@@ -90,6 +84,7 @@ Text Domain: agilus
     z-index: 100; /* Optional: ensures the element appears above other content */
   }
 
+  /* Main Navigation */
   .ag-main-nav > .wp-block-navigation-item > a {
     border-bottom: 4px solid transparent;
     transition: all 0.3s ease-in-out;
@@ -153,7 +148,6 @@ Text Domain: agilus
   }
 
   /* Top Search Bar */
-
   .top-nav-search-bar {
     opacity: 0;
     visibility: hidden;
@@ -182,26 +176,36 @@ Text Domain: agilus
     }
   }
 
-  /* Gravity Forms */
-
-  body .gform_wrapper .gform_footer input[type='submit'] {
-    background-color: var(--wp--preset--color--ag-blue-500);
-    font-size: var(--wp--preset--font-size--x-large) !important;
-    color: var(--wp--preset--color--light);
-    font-weight: 300 !important;
-    padding: 1rem 2rem !important;
-    border-radius: 8px !important;
+  @layer transitions {
+    .button,
+    .wp-block-button__link {
+      transition: background-color 0.3s ease-in-out;
+    }
+    /* Custom CSS for Featured Image Block */
+    .wp-block-post-featured-image img:hover {
+      opacity: 0.9;
+      transition: all 1s;
+    }
   }
-  body .gform_wrapper .gform_footer input:hover[type='submit'] {
-    background-color: var(--wp--preset--color--ag-blue-600) !important;
-  }
-}
 
-/* Custom CSS for Featured Image Block */
+  @layer gravityforms {
+    /* Gravity Forms */
 
-@layer transitions {
-  .wp-block-post-featured-image img:hover {
-    opacity: 0.9;
-    transition: all 0.3s;
+    body .gform_wrapper .gform_footer input[type='submit'] {
+      background-color: var(--wp--preset--color--ag-blue-500);
+      font-family: var(--wp--preset--font-family--inter) !important;
+      font-size: var(--wp--preset--font-size--large) !important;
+      color: var(--wp--preset--color--light);
+      font-weight: 700 !important;
+      padding: 1rem 1.5rem !important;
+      border-radius: 8px !important;
+    }
+    body .gform_wrapper .gform_footer input:hover[type='submit'] {
+      background-color: var(--wp--preset--color--ag-blue-600) !important;
+    }
+
+    .ag-job-seekers-search-form .gform_fields {
+      row-gap: 1rem !important;
+    }
   }
 }
