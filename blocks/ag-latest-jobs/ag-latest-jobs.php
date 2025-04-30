@@ -17,7 +17,6 @@ if ($num_items_to_show && $xml_feed_url) {
     $feed = ag_get_latest_jobs();
 }
 
-
 // Create class attribute allowing for custom "className" and "align" values.
 $class_name = 'ag-latest-jobs';
 $background_color = '';
@@ -35,11 +34,9 @@ if ($background_color || $text_color) {
 // Build a valid style attribute for background and text colors.
 $styles = array('background-color: ' . $background_color, 'color: ' . $text_color);
 $style = implode('; ', $styles);
-
-
 ?>
 
-<div class="wp-block-columns alignwide is-layout-flex wp-container-core-columns-layout-1 <?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
+<div class="ag-latest-jobs <?php echo esc_attr($class_name); ?>" style="<?php echo esc_attr($style); ?>">
     <?php
     if (is_array($feed)) {
         foreach ($feed['jobs'] as $job) {
@@ -51,7 +48,7 @@ $style = implode('; ', $styles);
             $date_obj = strtotime($date);
             $date_str = date('F j, Y', $date_obj);
     ?>
-            <div class="wp-block-column ag-latest-jobs__col ag-clickable-card" style="flex-basis:33.33%">
+            <div class="ag-latest-jobs__item ag-clickable-card">
                 <h3 class="ag-latest-jobs__title"><?php echo (esc_html($title)); ?></h3>
                 <ul class="ag-latest-jobs__list">
                     <li class="ag-latest-jobs__list-item"><?php echo (esc_html($location)); ?></li>

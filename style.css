@@ -14,7 +14,7 @@ Text Domain: agilus
 */
 
 @layer reset {
-  html {
+  html:not(.interface-interface-skeleton__html-container) {
     height: 100%;
   }
   body {
@@ -25,6 +25,12 @@ Text Domain: agilus
   h3,
   h4 {
     text-wrap: balance;
+  }
+
+  /* This is a workaround for the fact that the block editor targets anchors which are children of headers */
+  :is(h1, h2, h3, h4, h5, h6) > a {
+    font-style: inherit !important;
+    font-weight: inherit !important;
   }
 
   p,
@@ -78,6 +84,34 @@ Text Domain: agilus
     scroll-padding-top: 180px; /* Should match your header height */
   }
 
+  /* Selection Page */
+
+  @media (width < 1200px) {
+    .ag-selection-box--desktop {
+      display: none;
+    }
+    .ag-selection-box--mobile {
+      display: block;
+    }
+  }
+
+  @media (width >= 1200px) {
+    .ag-selection-box--desktop {
+      display: block;
+    }
+    .ag-selection-box--mobile {
+      display: none;
+    }
+  }
+
+  .ag-selection-boxs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  /* Sticky Header */
   header {
     position: sticky;
     top: 0;
@@ -91,6 +125,10 @@ Text Domain: agilus
     &:hover {
       border-bottom: 4px solid var(--wp--preset--color--neutral-900);
     }
+  }
+
+  .ag-main-nav > .wp-block-navigation-item.current-menu-item > a {
+    border-bottom: 4px solid var(--wp--preset--color--neutral-900);
   }
 
   .ag-main-nav .wp-block-navigation__submenu-container a {
