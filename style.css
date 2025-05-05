@@ -84,31 +84,25 @@ Text Domain: agilus
     scroll-padding-top: 180px; /* Should match your header height */
   }
 
-  /* Selection Page */
+  /* Selection Page - If not on an admin page, Show the appropriate selection blocks based on the screen size  */
+  body:not(wp-admin) {
+    @media (width < 1200px) {
+      .ag-selection-box--desktop {
+        display: none;
+      }
+      .ag-selection-box--mobile {
+        display: block;
+      }
+    }
 
-  @media (width < 1200px) {
-    .ag-selection-box--desktop {
-      display: none;
+    @media (width >= 1200px) {
+      .ag-selection-box--desktop {
+        display: block;
+      }
+      .ag-selection-box--mobile {
+        display: none;
+      }
     }
-    .ag-selection-box--mobile {
-      display: block;
-    }
-  }
-
-  @media (width >= 1200px) {
-    .ag-selection-box--desktop {
-      display: block;
-    }
-    .ag-selection-box--mobile {
-      display: none;
-    }
-  }
-
-  .ag-selection-boxs {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 0;
   }
 
   /* Sticky Header */
@@ -198,6 +192,21 @@ Text Domain: agilus
       max-height: 100px; /* Adjust based on expected content height */
       overflow: visible;
     }
+  }
+
+  /* Senior Leadership Grid */
+  .ag-team-members-post-template {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ag-team-members-post-template .ag-team-members {
+    max-width: 340px;
+  }
+
+  /* Details Blocks  */
+  .wp-block-details summary {
+    font-weight: bold;
   }
 
   /* Footer */
