@@ -1,0 +1,73 @@
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.komodoproject
+.komodotools/
+*.tmproj
+*.tmproject
+tmtags
+nbproject/
+*.swp
+*.vi
+*~
+
+# Dependency Management
+/node_modules/
+/vendor/
+/bower_components/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+package-lock.json
+composer.lock
+
+# Build and Compiled Files
+/dist/
+/build/
+*.min.css
+*.min.js
+*.map
+
+# WordPress Specific
+# Uncomment if you're developing a parent theme
+# style.css.map
+
+# Logging Files
+*.log
+/logs/
+
+# Cache Files
+.sass-cache/
+.cache/
+.tmp/
+
+# Environment and Config Files
+.env
+.env.*
+config.local.php
+
+# Backup Files
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+*.temp
+
+# Miscellaneous
+*.zip
+*.tar
+*.gz
+*.rar
+*.7z

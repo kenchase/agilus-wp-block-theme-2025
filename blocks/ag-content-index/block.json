@@ -1,0 +1,27 @@
+{
+  "name": "acf/ag-content-index",
+  "title": "AG Content Index",
+  "description": "A block that displays toggles the visiblity of content using a content index.",
+  "style": ["file:./ag-content-index.css"],
+  "script": "file:./ag-content-index.js",
+  "category": "agilus-blocks",
+  "icon": "admin-users",
+  "keywords": ["index", "toggle", "content"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "ag-content-index.php"
+  },
+  "supports": {
+    "anchor": true,
+    "jsx": true,
+    "color": {
+      "gradients": true,
+      "text": true,
+      "background": true
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  }
+}

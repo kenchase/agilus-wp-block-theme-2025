@@ -1,0 +1,16 @@
+{
+  "name": "acf/ag-team-member-role",
+  "title": "AG Team Member Role",
+  "description": "A block that displays the role of a team member.",
+  "style": ["file:./ag-team-member-role.css"],
+  "category": "agilus-blocks",
+  "icon": "admin-users",
+  "keywords": ["team", "member", "role", "position"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "ag-team-member-role.php"
+  },
+  "supports": {
+    "jsx": true
+  }
+}

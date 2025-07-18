@@ -1,0 +1,56 @@
+{
+  "name": "acf/ag-branches",
+  "title": "AG Branch",
+  "description": "A block that displays an Agilus Branch details.",
+  "style": ["file:./ag-branches.css"],
+  "category": "agilus-blocks",
+  "icon": "admin-users",
+  "keywords": ["location", "branch", "address", "contact"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "ag-branches.php"
+  },
+  "supports": {
+    "align": true,
+    "alignText": true,
+    "anchor": false,
+    "customClassName": true,
+    "color": {
+      "background": true,
+      "text": true,
+      "gradient": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    },
+    "jsx": true
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "team_member_role": "Example Role"
+      }
+    }
+  },
+  "styles": [
+    {
+      "name": "default",
+      "label": "Default",
+      "isDefault": true
+    },
+    {
+      "name": "lead",
+      "label": "Lead"
+    },
+    {
+      "name": "drop-cap",
+      "label": "Drop Cap"
+    }
+  ]
+}

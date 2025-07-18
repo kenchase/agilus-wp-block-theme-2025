@@ -1,0 +1,17 @@
+{
+  "name": "acf/latest-jobs",
+  "title": "AG Search Toggle",
+  "description": "Icon that toggles the search bar visibility",
+  "style": ["file:./ag-search-toggle.css"],
+  "script": "file:./ag-search-toggle.js",
+  "category": "agilus-blocks",
+  "icon": "admin-tools",
+  "keywords": ["search"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "ag-search-toggle.php"
+  },
+  "supports": {
+    "anchor": false
+  }
+}

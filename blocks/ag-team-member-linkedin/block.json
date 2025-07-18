@@ -1,0 +1,16 @@
+{
+  "name": "acf/ag-team-member-linkedin",
+  "title": "AG Team Member LinkedIn",
+  "description": "A block that displays the LinkedIn link of a team member.",
+  "style": ["file:./ag-team-member-linkedin.css"],
+  "category": "agilus-blocks",
+  "icon": "admin-users",
+  "keywords": ["team", "member", "linkedin", "social"],
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "ag-team-member-linkedin.php"
+  },
+  "supports": {
+    "jsx": true
+  }
+}

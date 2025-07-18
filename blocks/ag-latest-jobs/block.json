@@ -1,0 +1,17 @@
+{
+  "name": "acf/lastest-jobs",
+  "title": "AG Latest Jobs",
+  "description": "Automatically display the latest jobs from an XML feed.",
+  "style": ["file:./ag-latest-jobs.css"],
+  "script": "file:./ag-latest-jobs.js",
+  "category": "agilus-blocks",
+  "icon": "admin-tools",
+  "keywords": ["work", "jobs", "employment", "career"],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "ag-latest-jobs.php"
+  },
+  "supports": {
+    "anchor": false
+  }
+}

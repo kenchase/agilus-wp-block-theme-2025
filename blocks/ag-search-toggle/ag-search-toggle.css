@@ -1,0 +1,17 @@
+.ag-search-toggle {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ag-search-toggle-btn {
+  font: inherit;
+  font-size: var(--wp--preset--font-size--small) !important;
+  background: transparent;
+  color: var(--wp--preset--color--light);
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
